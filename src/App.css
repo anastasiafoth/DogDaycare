@@ -4,3 +4,155 @@
   padding: 2rem;
   text-align: center;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #3a9bdc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.App {
+  background: linear-gradient(135deg, #f4734b 0%, #f5a623 50%, #f0d060 100%);
+  border-radius: 18px;
+  padding: 40px 50px 50px;
+  width: 620px;
+  min-height: 480px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.App h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Form row */
+.add-new-dog {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.add-new-dog input[type="text"] {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Nunito', sans-serif;
+  background: white;
+  color: #333;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.add-new-dog input[type="text"]:focus {
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
+}
+
+.add-new-dog input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.add-new-dog button {
+  padding: 10px 22px;
+  background-color: #2f7ec7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.add-new-dog button:hover {
+  background-color: #2568a8;
+}
+
+.add-new-dog button:active {
+  transform: scale(0.97);
+}
+
+/* Toggle button */
+.App > button {
+  padding: 10px 28px;
+  background-color: #2f7ec7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.App > button:hover {
+  background-color: #2568a8;
+}
+
+.App > button:active {
+  transform: scale(0.97);
+}
+
+/* Dogs list container */
+.Dogs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+/* Individual Dog card */
+.Dog {
+  gap:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background: linear-gradient(135deg, #f4734b 0%, #f5a623 55%, #f0d060 100%);
+  border-radius: 12px;
+  padding: 20px 50px;
+  margin:20px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.3px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: default;
+}
+
+.Dog:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}

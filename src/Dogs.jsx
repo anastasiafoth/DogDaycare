@@ -4,7 +4,7 @@ export default function Dogs(props) {
   return (
     <div>
       {props.dogs.map((dog, index) => (
-        <Dog dog={dog} key={index}/>
+        <Dog dog={dog} key={index} id={index}/>
       ))}
     </div>
   );
