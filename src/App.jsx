@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Dogs from "./Dogs";
 import "./App.css";
 
 function App() {
-  const [dogs, setDogs] = useState(["Rover", "Buddy", "Rex"]);
+  const [dogs, setDogs] = useState(() => {
+    const savedDogs = localStorage.getItem('dogs');
+    return savedDogs ? JSON.parse(savedDogs) : [];
+  });
   const [showDog, setShowDogs] = useState(true);
 
   function handleSubmit(event) {
@@ -21,6 +24,10 @@ function App() {
   function toggleList() {
     setShowDogs((prevShown) => !prevShown);
   }
+
+  useEffect(() => {
+    localStorage.setItem("dogs", JSON.stringify(dogs));
+  }, [dogs])
 
   return (
     <div className="App">
